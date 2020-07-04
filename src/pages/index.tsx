@@ -16,7 +16,7 @@ export const Home = (): JSX.Element => {
       </div>
       <div>
         <p>
-          Currently state 3 restrictions are in effect in the following
+          Currently stage 3 restrictions are in effect in the following
           postcodes 3012, 3021, 3032, 3038, 3042, 3046, 3047, 3055, 3060 and
           3064. This map is meant to be used as a visual aid representing the
           offical data found on the{' '}
