@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
 import Head from 'next/head'
 
-import styles from '../styles/map.module.css'
+// import styles from '../styles/map.module.css'
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
 
@@ -98,7 +98,7 @@ const Map = (): JSX.Element => {
           rel="stylesheet"
         />
       </Head>
-      <div className={styles.map} ref={mapRef} />
+      <div style={{ height: '100%' }} ref={mapRef} />
     </>
   )
 }

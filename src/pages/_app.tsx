@@ -1,7 +1,7 @@
 // import App from 'next/app'
 // import 'https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css'
 
-import "../styles/main.css"
+import '../styles/main.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
