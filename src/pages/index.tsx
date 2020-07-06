@@ -70,6 +70,10 @@ export const Home = (): JSX.Element => {
               </Link>{' '}
               to see what restrictions are in place.
             </p>
+            <p>
+              Current public housing apartments that are in total lockdown are
+              indicated with the markers.
+            </p>
           </Card>
         </div>
         <div className={styles.map}>
