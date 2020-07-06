@@ -159,7 +159,7 @@ const Map = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Lockdown Map</title>
+        <title>Victoria Lockdown Map</title>
         <link
           href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
           rel="stylesheet"

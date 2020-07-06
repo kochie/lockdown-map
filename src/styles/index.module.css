@@ -24,12 +24,12 @@
     background-image: url("/images/flinders-street.jpg");
     background-size: cover;
     background-position: center;
-    margin: 50px;
+    margin-top: 5em;
     display: flex;
     align-items: center;
 }
 
 
 .alert {
-    margin: 10% 20%;
+    margin: 5em 30%;
 }

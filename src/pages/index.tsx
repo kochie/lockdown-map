@@ -9,10 +9,31 @@ import styles from '../styles/index.module.css'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import EventTimeline from '../components/Timeline'
+import Head from 'next/head'
 
 export const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <Header />
       <div className={styles.jumbotron}>
         <Heading marginLeft={'2em'} color={'white'} className={styles.heading}>
@@ -43,8 +64,11 @@ export const Home = (): JSX.Element => {
             <p>
               Highlighted below are areas within the state where stage 3
               restrictions are now in place. If you live in these areas please
-              visit the Department of Health and Human Services to see what
-              restrictions are in place.
+              visit the{' '}
+              <Link href={'https://www.dhhs.vic.gov.au/coronavirus'}>
+                Department of Health and Human Services website
+              </Link>{' '}
+              to see what restrictions are in place.
             </p>
           </Card>
         </div>

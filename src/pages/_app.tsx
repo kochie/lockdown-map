@@ -9,7 +9,31 @@ config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatica
 import '../styles/main.css'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import * as Fathom from 'fathom-client'
+
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
+  useEffect(() => {
+    // Initialize Fathom when the app loads
+    Fathom.load('PCGIIDZN', {
+      includedDomains: ['lockdownmap.melbourne'],
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview()
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete)
+    }
+  }, [])
+
   return (
     <ThemeProvider>
       <Component {...pageProps} />
