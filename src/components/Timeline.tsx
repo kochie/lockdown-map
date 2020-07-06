@@ -22,6 +22,15 @@ const events = [
 - 9 Pampas Street, North Melbourne
 - 76 Canning Street, North Melbourne`,
   },
+  {
+    datetime: '06 July 2020 23:59:00',
+    details:
+      'New South Wales border closed to metropolitan Melbourne residents.',
+  },
+  {
+    datetime: '07 July 2020 23:59:00',
+    details: 'New South Wales border closed.',
+  },
 ]
 
 function getActiveStep(): string {
