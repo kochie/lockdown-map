@@ -1,3 +1,21 @@
 body {
     margin: 0;
+    background-color: var(--color2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --color1: #07151E;
+    --color2: #E0E8F3;
+    --color3: #2E6B63;
+    --color4: #E45C38;
+    --color5: #C6974F;
 }

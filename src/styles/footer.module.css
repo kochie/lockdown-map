@@ -1,0 +1,36 @@
+.footer {
+    width: 100vw;
+    height: 5em;
+    background-color: var(--color1);
+    position: relative;
+    bottom: 0;
+}
+.footerFlexbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 30%;
+    max-width: 1080px;
+    justify-content: space-between;
+}
+
+.content {
+}
+
+.link {
+  color: inherit;
+}
+
+.icon:hover {
+    color: white;
+
+}
+
+.icon {
+      transition: 0.3s;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}

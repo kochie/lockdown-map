@@ -1,0 +1,33 @@
+.header {
+    width: 100vw;
+    height: 5em;
+    background-color: var(--color1);
+}
+
+.headerFlexbox {
+    display: flex;
+    flex-direction: row;
+    margin: 0 30%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.headerFlexbox span {
+    transition: 0.3s;
+}
+
+.headerFlexbox span:hover {
+    color: white;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

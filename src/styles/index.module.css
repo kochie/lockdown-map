@@ -2,3 +2,34 @@
     height: 50vh;
     width: 100vw;
 }
+
+.timeline {
+    margin: 5% 30%;
+}
+
+.heading {
+    color: white;
+    margin-left: 2em;
+}
+
+.container {
+    min-height: 100vh;
+    /* scroll-behavior: smooth; */
+      /* overflow-y: scroll; */
+        /* display: block; */
+}
+
+.jumbotron {
+    height: 30em;
+    background-image: url("/images/flinders-street.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+.alert {
+    margin: 10% 20%;
+}

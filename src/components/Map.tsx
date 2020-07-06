@@ -20,6 +20,8 @@ const Map = (): JSX.Element => {
     '3055',
     '3060',
     '3064',
+    '3031',
+    '3051',
   ]
 
   useEffect(() => {
@@ -83,6 +85,8 @@ const Map = (): JSX.Element => {
     )
     map.addControl(new mapboxgl.FullscreenControl())
     map.addControl(new mapboxgl.NavigationControl())
+
+    map.scrollZoom.disable()
 
     return () => {
       map.remove()
