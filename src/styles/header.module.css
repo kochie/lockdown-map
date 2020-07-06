@@ -16,6 +16,13 @@
     height: 100%;
 }
 
+
+@media only screen and (max-device-width: 812px) {
+    .headerFlexbox {
+        margin: 0 2%;
+    }
+}
+
 .headerFlexbox span {
     transition: 0.3s;
 }

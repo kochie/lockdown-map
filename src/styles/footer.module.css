@@ -14,6 +14,12 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-device-width: 812px) {
+    .footerFlexbox {
+        margin: 0 2%;
+    }
+}
+
 .content {
 }
 

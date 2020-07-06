@@ -21,7 +21,7 @@ export const Home = (): JSX.Element => {
         description="A visual guide to the lockdown restrictions in place in the state of Victoria."
         canonical="https://lockdownmap.melbourne/"
         openGraph={{
-          url: 'https://www.url.ie/a',
+          url: 'https://lockdownmap.melbourne',
           title: 'Victorian Lockdown Map',
           description:
             'A visual guide to the lockdown restrictions in place in the state of Victoria.',

@@ -4,7 +4,21 @@
 }
 
 .timeline {
-    margin: 5% 30%;
+    margin: 5em 30%;
+}
+
+.alert {
+    margin: 5em 30%;
+}
+
+@media only screen and (max-device-width: 812px) {
+    .timeline {
+        margin: 5em 2%;
+    }
+
+    .alert {
+        margin: 5em 2%;
+    }
 }
 
 .heading {
@@ -29,7 +43,3 @@
     align-items: center;
 }
 
-
-.alert {
-    margin: 5em 30%;
-}
