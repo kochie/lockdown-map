@@ -14,7 +14,7 @@
 
 .heading {
     color: white;
-    margin-left: 2em;
+    margin-left: 2em !important;
     position: relative;
 }
 
