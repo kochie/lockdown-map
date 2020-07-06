@@ -10,10 +10,37 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import EventTimeline from '../components/Timeline'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 export const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
+      <NextSeo
+        title="Victorian Lockdown Map"
+        description="A visual guide to the lockdown restrictions in place in the state of Victoria."
+        canonical="https://lockdownmap.melbourne/"
+        openGraph={{
+          url: 'https://www.url.ie/a',
+          title: 'Victorian Lockdown Map',
+          description:
+            'A visual guide to the lockdown restrictions in place in the state of Victoria.',
+          images: [
+            {
+              url: 'https://lockdownmap.melbourne/images/flinders-street.jpg',
+              width: 2500,
+              height: 1660,
+              alt: 'Flinders St Station',
+            },
+          ],
+          // eslint-disable-next-line @typescript-eslint/camelcase
+          site_name: 'Victorian Lockdown Map',
+        }}
+        twitter={{
+          handle: '@kochie',
+          site: '@kochie',
+          cardType: 'summary_large_image',
+        }}
+      />
       <Head>
         <link
           rel="apple-touch-icon"
