@@ -13,7 +13,11 @@ const Header = (): JSX.Element => {
     <div className={styles.header}>
       <div className={styles.headerFlexbox}>
         <div className={styles.heading}>
-          <FontAwesomeIcon icon={faLock} size={'2x'} />
+          <FontAwesomeIcon
+            icon={faLock}
+            style={{ marginRight: 10 }}
+            size={'2x'}
+          />
           <div className={styles.title}>
             Victoria <br />
             Lockdown Map
