@@ -19,3 +19,10 @@ html {
     --color4: #E45C38;
     --color5: #C6974F;
 }
+
+:target:before {
+    content: "";
+    display: block;
+    height: 5em;
+    margin: -5em 0 0;
+}
