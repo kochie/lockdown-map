@@ -23,12 +23,12 @@ const events = [
 - 76 Canning Street, North Melbourne`,
   },
   {
-    datetime: '06 July 2020 23:59:00',
+    datetime: '06 July 2020 23:59:00 GMT+10',
     details:
       'New South Wales border closed to metropolitan Melbourne residents.',
   },
   {
-    datetime: '07 July 2020 23:59:00',
+    datetime: '07 July 2020 23:59:00 GMT+10',
     details: 'New South Wales border closed.',
   },
 ]

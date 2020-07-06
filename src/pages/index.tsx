@@ -64,7 +64,7 @@ export const Home = (): JSX.Element => {
       </Head>
       <Header />
       <div className={styles.jumbotron}>
-        <Heading marginLeft={'2em'} color={'white'} className={styles.heading}>
+        <Heading color={'white'} className={styles.heading}>
           Victoria Postcode Lockdown Map
         </Heading>
       </div>

@@ -11,19 +11,11 @@
     margin: 5em 30%;
 }
 
-@media only screen and (max-device-width: 812px) {
-    .timeline {
-        margin: 5em 2%;
-    }
-
-    .alert {
-        margin: 5em 2%;
-    }
-}
 
 .heading {
     color: white;
     margin-left: 2em;
+    position: relative;
 }
 
 .container {
@@ -35,11 +27,38 @@
 
 .jumbotron {
     height: 30em;
-    background-image: url("/images/flinders-street.jpg");
-    background-size: cover;
-    background-position: center;
     margin-top: 5em;
     display: flex;
     align-items: center;
+    background-color: black;
 }
 
+.jumbotron::before {
+    content: "";
+    height: 30em;
+    margin-top: 5em;
+    background-image: url("/images/flinders-street.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.65;
+}
+
+
+@media only screen and (max-device-width: 812px) {
+    .timeline {
+        margin: 5em 2%;
+    }
+
+    .alert {
+        margin: 5em 2%;
+    }
+
+    .heading {
+        margin: 0 5%;
+    }
+}
