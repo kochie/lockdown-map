@@ -118,7 +118,7 @@ export const Home = (): JSX.Element => {
         <Card>
           <Heading use={'h2'}>Contributing</Heading>
           <p>
-            To update any information or to report any bugs that you encounder
+            To update any information or to report any bugs that you encounter
             please open an issue in{' '}
             <Link href={'https://github.com/kochie/lockdown-map/issues'}>
               Github
