@@ -15,6 +15,7 @@ import { NextSeo } from 'next-seo'
 export const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
+      <div id="top" />
       <NextSeo
         title="Victorian Lockdown Map"
         description="A visual guide to the lockdown restrictions in place in the state of Victoria."

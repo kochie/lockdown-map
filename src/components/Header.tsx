@@ -12,17 +12,19 @@ const Header = (): JSX.Element => {
   return (
     <div className={styles.header}>
       <div className={styles.headerFlexbox}>
-        <div className={styles.heading}>
-          <FontAwesomeIcon
-            icon={faLock}
-            style={{ marginRight: 10 }}
-            size={'2x'}
-          />
-          <div className={styles.title}>
-            Victoria <br />
-            Lockdown Map
+        <a href="#top" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className={styles.heading}>
+            <FontAwesomeIcon
+              icon={faLock}
+              style={{ marginRight: 10 }}
+              size={'2x'}
+            />
+            <div className={styles.title}>
+              Victoria <br />
+              Lockdown Map
+            </div>
           </div>
-        </div>
+        </a>
         <div className={styles.tools}>
           <span>
             <a href="#map">

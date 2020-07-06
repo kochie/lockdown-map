@@ -47,4 +47,9 @@
     align-items: center;
     /* gap: 10px; */
     /* color: white; */
+    transition: 0.3s;
+}
+
+.heading:hover {
+    color: white;
 }
