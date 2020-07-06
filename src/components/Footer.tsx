@@ -3,6 +3,7 @@ import React from 'react'
 // import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCoffee } from '@fortawesome/pro-duotone-svg-icons'
 
 import styles from '../styles/footer.module.css'
 
@@ -26,6 +27,13 @@ const Footer = (): JSX.Element => {
             <FontAwesomeIcon
               className={styles.icon}
               icon={faTwitter}
+              size={'lg'}
+            />
+          </a>
+          <a className={styles.link} href={'https://buymeacoff.ee/kochie'}>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faCoffee}
               size={'lg'}
             />
           </a>

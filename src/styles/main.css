@@ -7,10 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
+/* a {
     color: inherit;
     text-decoration: none;
-}
+} */
 
 :root {
     --color1: #07151E;

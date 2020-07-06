@@ -31,3 +31,16 @@
     flex-direction: row;
     gap: 20px;
 }
+
+.tools a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    /* color: white; */
+}

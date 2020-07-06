@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Alert } from 'fannypack'
+import { Heading, Alert, Link, Card } from 'fannypack'
 // import { Timeline } from 'fannypack'
 // import Head from 'next/head'
 
@@ -25,23 +25,51 @@ export const Home = (): JSX.Element => {
           presented here is accurate and up to date, this is not an official
           webite sanctioned by any governing authority. Please use the
           information you find here in conjunction with the states official{' '}
-          <a
+          <Link
             style={{ textDecoration: 'underline', fontWeight: 'bold' }}
             href={
               'https://www.dhhs.vic.gov.au/restrictions-restricted-postcodes-covid-19'
             }
           >
             website
-          </a>
+          </Link>
           .
         </Alert>
       </div>
-      <div id="map" className={styles.map}>
-        <Map />
+      <div id="map">
+        <div className={styles.timeline}>
+          <Card>
+            <Heading use={'h2'}>Map</Heading>
+            <p>
+              Highlighted below are areas within the state where stage 3
+              restrictions are now in place. If you live in these areas please
+              visit the Department of Health and Human Services to see what
+              restrictions are in place.
+            </p>
+          </Card>
+        </div>
+        <div className={styles.map}>
+          <Map />
+        </div>
       </div>
       <div id="timeline" className={styles.timeline}>
-        <Heading use={'h2'}>Event Timeline</Heading>
-        <EventTimeline />
+        <Card>
+          <Heading use={'h2'}>Event Timeline</Heading>
+          <EventTimeline />
+        </Card>
+      </div>
+      <div className={styles.timeline}>
+        <Card>
+          <Heading use={'h2'}>Contributing</Heading>
+          <p>
+            To update any information or to report any bugs that you encounder
+            please open an issue in{' '}
+            <Link href={'https://github.com/kochie/lockdown-map/issues'}>
+              Github
+            </Link>{' '}
+            and I&apos;ll take a look.
+          </p>
+        </Card>
       </div>
       <Footer />
     </div>

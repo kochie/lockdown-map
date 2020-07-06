@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
 import Head from 'next/head'
 import geocoding from '@mapbox/mapbox-sdk/services/geocoding'
+// import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 // import styles from '../styles/map.module.css'
 
@@ -9,6 +10,10 @@ mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
 const geoClient = geocoding({
   accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
 })
+
+// class ZoomControl extends Control {
+
+// }
 
 const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
@@ -138,8 +143,13 @@ const Map = (): JSX.Element => {
     )
     map.addControl(new mapboxgl.FullscreenControl())
     map.addControl(new mapboxgl.NavigationControl())
+    map.addControl(new mapboxgl.ScaleControl())
 
-    map.scrollZoom.disable()
+    // map.addControl(new MapboxGeocoder({
+    //   accessToken: mapboxgl.accessToken,
+    //   mapboxgl: mapboxgl
+    // }));
+    // map.scrollZoom.disable()
 
     return () => {
       map.remove()
