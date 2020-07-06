@@ -10,8 +10,17 @@ const events = [
   },
   {
     datetime: '04 July 2020 23:59:00',
-    details:
-      'Two additional postcodes are now in stage 3 restrictions 3031, and 3051.',
+    details: `Two additional postcodes are now in stage 3 restrictions 3031, and 3051. Additionally some public housing estates have been placed in total lockdown. There addresses are:
+    
+- 12 Holland Court, Flemington
+- 120 Racecourse Road, Flemington
+- 126 Racecourse Road, Flemington
+- 130 Racecourse Road, Flemington
+- 12 Sutton Street, North Melbourne
+- 33 Alfred Street, North Melbourne
+- 159 Melrose Street, North Melbourne
+- 9 Pampas Street, North Melbourne
+- 76 Canning Street, North Melbourne`,
   },
 ]
 

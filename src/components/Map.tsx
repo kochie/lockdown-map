@@ -1,10 +1,14 @@
 import React, { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
 import Head from 'next/head'
+import geocoding from '@mapbox/mapbox-sdk/services/geocoding'
 
 // import styles from '../styles/map.module.css'
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
+const geoClient = geocoding({
+  accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
+})
 
 const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
@@ -24,6 +28,31 @@ const Map = (): JSX.Element => {
     '3051',
   ]
 
+  const publicHousingAddresses = [
+    '12 Holland Court, Flemington',
+    '120 Racecourse Road, Flemington',
+    '126 Racecourse Road, Flemington',
+    '130 Racecourse Road, Flemington',
+    '12 Sutton Street, North Melbourne',
+    '33 Alfred Street, North Melbourne',
+    '159 Melrose Street, North Melbourne',
+    '9 Pampas Street, North Melbourne',
+    '76 Canning Street, North Melbourne',
+  ]
+
+  const publicHousingRequests = publicHousingAddresses.map(async (address) => {
+    const request = await geoClient
+      .forwardGeocode({
+        query: address,
+        autocomplete: false,
+        limit: 1,
+        mode: 'mapbox.places',
+      })
+      .send()
+
+    return request.body?.features[0]
+  })
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapRef.current,
@@ -41,6 +70,30 @@ const Map = (): JSX.Element => {
     map.on('mouseleave', 'postcodes', function () {
       map.getCanvas().style.cursor = ''
     })
+
+    Promise.all(publicHousingRequests).then((h) =>
+      h.forEach((feature) => {
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          feature.place_name
+        )
+
+        // console.log(feature)
+
+        const marker = new mapboxgl.Marker()
+          .setLngLat(feature?.center)
+          .setPopup(popup)
+          .addTo(map)
+
+        // marker.on('hover', (e) => {
+        //   console.log("HELLO")
+        // })
+
+        marker.getElement().onclick = (e) => {
+          marker.togglePopup()
+          e.stopPropagation()
+        }
+      })
+    )
 
     map.on('load', () => {
       map.addLayer({
