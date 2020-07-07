@@ -183,7 +183,7 @@ const Map = (): JSX.Element => {
       // map.setFilter('postcodes', )
     })
 
-    console.log(map.getLayer('lga'))
+    // console.log(map.getLayer('lga'))
 
     map.on('click', 'postcodes', function (e) {
       new mapboxgl.Popup()

@@ -35,7 +35,7 @@ const events = [
     datetime: '08 July 2020 23:59:00 GMT+10',
     details: `South Australian border closed.
 
-Greater Melbourne and Mitchell Shire return to Stage 3 restrictions.`
+Greater Melbourne and Mitchell Shire return to Stage 3 restrictions. Read the full statement from the premier [here](https://www.premier.vic.gov.au/wp-content/uploads/2020/07/200707-Statement-From-The-Premier.pdf).`
   }
 ]
 
