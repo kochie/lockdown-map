@@ -102,6 +102,10 @@ export const Home = (): JSX.Element => {
               Current public housing apartments that are in total lockdown are
               indicated with the markers.
             </p>
+            <p>
+              <span className={styles.purple}>Future locations in lockdown are presented in purple.</span><br/>
+              <span className={styles.pink}>Current locations in lockdown are presented in pink.</span>
+            </p>
           </Card>
         </div>
         <div className={styles.map}>

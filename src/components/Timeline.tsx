@@ -31,6 +31,12 @@ const events = [
     datetime: '07 July 2020 23:59:00 GMT+10',
     details: 'New South Wales border closed.',
   },
+  {
+    datetime: '08 July 2020 23:59:00 GMT+10',
+    details: `South Australian border closed.
+
+Greater Melbourne and Mitchell Shire return to Stage 3 restrictions.`
+  }
 ]
 
 function getActiveStep(): string {

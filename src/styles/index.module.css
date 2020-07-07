@@ -48,6 +48,13 @@
     opacity: 0.65;
 }
 
+.purple {
+    color: rgba(100, 110, 200)
+}
+
+.pink {
+    color: rgba(200, 100, 240)
+}
 
 @media only screen and (max-device-width: 812px) {
     .timeline {
