@@ -18,6 +18,41 @@ const geoClient = geocoding({
 const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
   const postcodeId = 'kochie.cjhqarkd'
+  const councilId = 'kochie.639o2kkw'
+  const futureRestrictedCouncils = [
+    '25340', // mornington penninsula
+    '21450', // cardinia,
+    '21610', // Casey
+    '22170', // Frankston
+    '22670', // Greater Dandenong
+    '23430', // Kingston
+    '20910', // Bayside
+    '22310', // Glen Eira
+    '24970', // Monash
+    '23670', // Knox
+    '27450', // Yarra Ranges
+    '24410', // Maroondah
+    '26980', // Whitehorse
+    '21110', // Boroondara
+    '26350', // Stonnington
+    '25900', // Port Phillip
+    '24600', // Melbourne
+    '27350', // Yarra
+    '23110', // Hobsons Bay
+    '24330', // Maribyrnong
+    '25060', // Moonee Valley
+    '25250', // Moreland
+    '21890', // Darebin
+    '20660', // Banyule
+    '24210', // Manningham
+    '25710', // Nillumbik
+    '27070', // Whittlesea
+    '23270', // Hume
+    '21180', // Brimbank
+    '27260', // Wyndham
+    '24850' // Mitchell
+  ]
+
   const restrictedPostcodes = [
     '3012',
     '3021',
@@ -123,13 +158,44 @@ const Map = (): JSX.Element => {
         },
       })
 
+      map.addLayer({
+        id: 'lga',
+        type: 'fill',
+        source: {
+          type: 'vector',
+          url: `mapbox://${councilId}`,
+        },
+        'source-layer': 'SDM734210-9hkugu',
+        filter: [
+          'match',
+          ['get', 'ABSLGACODE'],
+          futureRestrictedCouncils,
+          true,
+          false,
+        ],
+        paint: {
+          // 'line-width': 1,
+          'fill-color': 'rgba(100, 110, 200, 0.4)',
+          'fill-outline-color': 'rgb(0, 0, 0)',
+        },
+      })
+
       // map.setFilter('postcodes', )
     })
+
+    // console.log(map.getLayer('lga'))
 
     map.on('click', 'postcodes', function (e) {
       new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML(`<p>Postcode: ${e.features[0].properties.POSTCODE}</p>`)
+        .addTo(map)
+    })
+
+    map.on('click', 'lga', function (e) {
+      new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(`<p>LGA: ${e.features[0].properties.LGA_NAME}</p>`)
         .addTo(map)
     })
 
