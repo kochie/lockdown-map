@@ -59,6 +59,8 @@ const EventTimeline = (): JSX.Element => {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    hour: 'numeric', 
+    minute: 'numeric'
   }
 
   const dtf = Intl.DateTimeFormat('en-AU', options1)
