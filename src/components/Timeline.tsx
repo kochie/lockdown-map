@@ -9,7 +9,7 @@ const events = [
       'Currently stage 3 restrictions are in effect in the following postcodes 3012, 3021, 3032, 3038, 3042, 3046, 3047, 3055, 3060, and 3064. This map is meant to be used as a visual aid representing the offical data found on the [website](https://www.dhhs.vic.gov.au/restrictions-restricted-postcodes-covid-19) for the Victorian Health and Human Services Department.',
   },
   {
-    datetime: '04 July 2020 23:59:00',
+    datetime: '04 July 2020 23:59:00 GMT+10',
     details: `Two additional postcodes are now in stage 3 restrictions 3031, and 3051. Additionally some public housing estates have been placed in total lockdown. There addresses are:
     
 - 12 Holland Court, Flemington
@@ -35,8 +35,8 @@ const events = [
     datetime: '08 July 2020 23:59:00 GMT+10',
     details: `South Australian border closed.
 
-Greater Melbourne and Mitchell Shire return to Stage 3 restrictions. Read the full statement from the premier [here](https://www.premier.vic.gov.au/wp-content/uploads/2020/07/200707-Statement-From-The-Premier.pdf).`
-  }
+Greater Melbourne and Mitchell Shire return to Stage 3 restrictions. Read the full statement from the Premier [here](https://www.premier.vic.gov.au/wp-content/uploads/2020/07/200707-Statement-From-The-Premier.pdf).`,
+  },
 ]
 
 function getActiveStep(): string {
@@ -59,8 +59,8 @@ const EventTimeline = (): JSX.Element => {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-    hour: 'numeric', 
-    minute: 'numeric'
+    hour: 'numeric',
+    minute: 'numeric',
   }
 
   const dtf = Intl.DateTimeFormat('en-AU', options1)

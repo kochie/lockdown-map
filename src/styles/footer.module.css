@@ -30,7 +30,6 @@
 
 .icon:hover {
     color: white;
-
 }
 
 .icon {
@@ -40,4 +39,10 @@
 .icons {
     display: flex;
     /* gap: 20px; */
+}
+
+@media(prefers-color-scheme: dark) {
+    .icon:hover {
+        color: black;
+    }
 }

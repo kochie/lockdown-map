@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import Head from 'next/head'
 import geocoding from '@mapbox/mapbox-sdk/services/geocoding'
@@ -50,7 +50,7 @@ const Map = (): JSX.Element => {
     '23270', // Hume
     '21180', // Brimbank
     '27260', // Wyndham
-    '24850' // Mitchell
+    '24850', // Mitchell
   ]
 
   const restrictedPostcodes = [
@@ -93,10 +93,23 @@ const Map = (): JSX.Element => {
     return request.body?.features[0]
   })
 
+  const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    window.matchMedia('prefers-color-scheme: dark').addListener(() => {
+      setDarkMode(!darkMode)
+    })
+  }, [])
+
+  const darkStyle = 'mapbox://styles/kochie/ckcbyvjms6mh61ipih0b2ywwm'
+  const lightStyle = 'mapbox://styles/mapbox/streets-v11'
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapRef.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? darkStyle
+        : lightStyle,
       center: { lat: -37.7423107, lng: 145.0127503 },
       zoom: 10,
       // zoom: 13,
@@ -220,7 +233,7 @@ const Map = (): JSX.Element => {
     return () => {
       map.remove()
     }
-  }, [])
+  }, [darkMode])
 
   return (
     <>

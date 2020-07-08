@@ -13,11 +13,18 @@ html {
 } */
 
 :root {
-    --color1: #07151E;
-    --color2: #E0E8F3;
-    --color3: #2E6B63;
-    --color4: #E45C38;
-    --color5: #C6974F;
+    --color1: #07151E;   /* Rich Black FOGRA 29 */
+    --color2: #E0E8F3; /* Alice Blue */
+    --color3: #2E6B63; /* Myrtle Green */
+    --color4: #E45C38; /* Orange Soda */
+    --color5: #C6974F; /* Camel */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color1: #E0E8F3; /* Alice Blue */
+        --color2: #07151E; /* Rich Black FOGRA 29 */
+    }
 }
 
 :target:before {
