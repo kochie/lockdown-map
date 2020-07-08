@@ -60,3 +60,13 @@
 .heading:hover {
     color: white;
 }
+
+
+@media(prefers-color-scheme: dark) {
+.headerFlexbox span:hover {
+    color: black;
+}
+.heading:hover {
+    color: black;
+}
+}
