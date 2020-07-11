@@ -103,8 +103,13 @@ export const Home = (): JSX.Element => {
               indicated with the markers.
             </p>
             <p>
-              <span className={styles.purple}>Future locations in lockdown are presented in purple.</span><br/>
-              <span className={styles.pink}>Current locations in lockdown are presented in pink.</span>
+              <span className={styles.purple}>
+                Future locations in lockdown are presented in purple.
+              </span>
+              <br />
+              <span className={styles.pink}>
+                Current locations in lockdown are presented in pink.
+              </span>
             </p>
           </Card>
         </div>

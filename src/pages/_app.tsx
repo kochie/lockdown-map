@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
     // Initialize Fathom when the app loads
     Fathom.load('PCGIIDZN', {
       includedDomains: ['lockdownmap.melbourne'],
-      url: "https://kite.kochie.io/script.js"
+      url: 'https://kite.kochie.io/script.js',
     })
 
     function onRouteChangeComplete() {

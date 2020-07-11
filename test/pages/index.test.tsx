@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '../testUtils'
 import { Home } from '../../src/pages/index'
 
-jest.mock("mapbox-gl", () => require("mapbox-gl-js-mock"));
+jest.mock('mapbox-gl', () => require('mapbox-gl-js-mock'))
 
 describe('Home page', () => {
   it('matches snapshot', () => {

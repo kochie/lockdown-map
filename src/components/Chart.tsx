@@ -1,10 +1,7 @@
 import React from 'react'
 
 const Chart = (): JSX.Element => {
-    return (
-        <>
-        </>
-    )
+  return <></>
 }
 
 export default Chart
