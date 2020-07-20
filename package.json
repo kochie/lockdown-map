@@ -30,7 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/pro-duotone-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "@mapbox/mapbox-gl-geocoder": "^4.5.1",
+    "@mapbox/mapbox-gl-geocoder": "^4.6.0",
     "@mapbox/mapbox-sdk": "^0.11.0",
     "@mdx-js/mdx": "^1.6.13",
     "@types/mapbox-gl": "^1.11.1",
