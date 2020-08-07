@@ -10,9 +10,12 @@ on:
     branches: [ master ]
 
 jobs:
-  buildandtest:
+  build and test:
 
     runs-on: ubuntu-latest
+    
+    env:
+      FONTAWESOME_NPM_AUTH_TOKEN: 398D7689-5234-4FAE-BC9F-F00107394239 
 
     strategy:
       matrix:
