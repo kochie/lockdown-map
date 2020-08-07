@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      FONTAWESOME_NPM_AUTH_TOKEN: 398D7689-5234-4FAE-BC9F-F00107394239 
+      FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
 
     strategy:
       matrix:
